@@ -95,6 +95,8 @@ angular_react_nginx_project
 
 **4. Clone the Angular project and run it:**
 
+# Backend
+
         sudo apt-get install -y git 
         cd /opt
         git clone https://github.com/tushardashpute/angular-12-node-js-project.git
@@ -114,30 +116,29 @@ angular_react_nginx_project
         Now we have started serverjs and its running on http://localhost:8080 . It will create tutorials table under the testdb. This table will be used when we will add/update/delete any tutorial 
 
 
+# Front-END
 
-cd ../angular-12-client/
-root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client# npm install
-root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client# ng build --prod
+                cd ../angular-12-client/
+                root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client# npm install
+                root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client# ng build --prod
 
 
-   
-Now we can copy the Angular12 static code generated in static folder to /var/www/html/angular, and update it to nginx sites_vaialbe.
 
-mkdir -p  /var/www/html/angular
-root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client/static# cp * /var/www/html/angular
-   
- cd /etc/nginx/sites-available
-   
- vi default 
- update the "root /var/www/*;" path to "root /var/www/html/angular;"
-   
-Now reload the nginx config and restart it.
+                Now we can copy the Angular12 static code generated in static folder to /var/www/html/angular, and update it to nginx sites_vaialbe.
 
-# service nginx reload
-# service nginx restart
+                mkdir -p  /var/www/html/angular
+                root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client/static# cp * /var/www/html/angular
 
-Now goto http://localhost --> and access the Angular CRUD app:
+                 cd /etc/nginx/sites-available
+
+                 vi default 
+                 update the "root /var/www/*;" path to "root /var/www/html/angular;"
+
+                Now reload the nginx config and restart it.
+
+                # service nginx reload
+                # service nginx restart
+
+                Now goto http://localhost --> and access the Angular CRUD app:
 
 <img width="1265" alt="image" src="https://user-images.githubusercontent.com/74225291/160227086-844e1ad3-3fa0-43b7-a845-2c6b086dd5b6.png">
-
-  159  ll
