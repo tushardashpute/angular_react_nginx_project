@@ -8,17 +8,16 @@ angular_react_nginx_project
         
 
 **1.  Install Nginx on Ubuntu instance:**
-   apt-get update
-   
-   sudo apt-get install -y nginx 
-     
-   nginx -v
-      nginx version: nginx/1.18.0 (Ubuntu)
+           # apt-get update   
+           # sudo apt-get install -y nginx 
 
-   # service nginx start
-   # service nginx status
+           # nginx -v
+              nginx version: nginx/1.18.0 (Ubuntu)
+
+           # service nginx start
+           # service nginx status
    
-Now you can check the nginx page at http://public_ip_of_EC2Instance
+**Now you can check the nginx page at http://public_ip_of_EC2Instance**
 
 **2.  Install nodejs and angular **
 
