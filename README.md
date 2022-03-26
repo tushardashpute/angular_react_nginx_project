@@ -20,7 +20,7 @@ angular_react_nginx_project
    
 **Now you can check the nginx page at http://public_ip_of_EC2Instance**
 
-**2.  Install nodejs and angular **
+**2.  Install nodejs and angular:**
 
            sudo apt-get install -y npm 
            apt-get install -y curl
@@ -30,13 +30,13 @@ angular_react_nginx_project
            npm install express sequelize mysql2 cors --save
            which ng
 
-   # node -v
-       v12.22.11
-   # npm -v
-       6.14.16
+           # node -v
+               v12.22.11
+           # npm -v
+               6.14.16
        
 
-**3. Install MySQL DB **
+**3. Install MySQL DB:**
 
         sudo apt install mysql-server
         sudo service mysql status
@@ -93,7 +93,7 @@ angular_react_nginx_project
         +--------------------+
         5 rows in set (0.00 sec)
 
-4. Clone the Angular project and run it:
+**4. Clone the Angular project and run it:**
 
         sudo apt-get install -y git 
         cd /opt
