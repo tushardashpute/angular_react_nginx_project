@@ -4,6 +4,7 @@ angular_react_nginx_project
 1. Install Nginx on Ubuntu instance:
 2. Install nodejs and angular 
 3. Install Express/MySQL/sequelize cors 
+4. Clone the Angular project and run it:
         
 
 **1.  Install Nginx on Ubuntu instance:**
@@ -11,7 +12,7 @@ angular_react_nginx_project
    
    sudo apt-get install -y nginx 
      
-   # nginx -v
+   nginx -v
       nginx version: nginx/1.18.0 (Ubuntu)
 
    # service nginx start
