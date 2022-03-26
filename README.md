@@ -118,27 +118,25 @@ angular_react_nginx_project
 
 # Front-END
 
-                cd ../angular-12-client/
-                root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client# npm install
-                root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client# ng build --prod
+        cd /opt/angular-12-node-js-project/angular-12-client/
+        root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client# npm install
+        root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client# ng build --prod
 
+        Now we can copy the Angular12 static code generated in static folder to /var/www/html/angular, and update it to nginx sites_vaialbe.
 
+        mkdir -p  /var/www/html/angular
+        root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client/static# cp * /var/www/html/angular
 
-                Now we can copy the Angular12 static code generated in static folder to /var/www/html/angular, and update it to nginx sites_vaialbe.
+         cd /etc/nginx/sites-available
 
-                mkdir -p  /var/www/html/angular
-                root@ip-172-31-2-248:/opt/angular-12-node-js-project/angular-12-client/static# cp * /var/www/html/angular
+         vi default 
+         update the "root /var/www/*;" path to "root /var/www/html/angular;"
 
-                 cd /etc/nginx/sites-available
+        Now reload the nginx config and restart it.
 
-                 vi default 
-                 update the "root /var/www/*;" path to "root /var/www/html/angular;"
+        # service nginx reload
+        # service nginx restart
 
-                Now reload the nginx config and restart it.
-
-                # service nginx reload
-                # service nginx restart
-
-                Now goto http://localhost --> and access the Angular CRUD app:
+        Now goto http://localhost --> and access the Angular CRUD app:
 
 <img width="1265" alt="image" src="https://user-images.githubusercontent.com/74225291/160227086-844e1ad3-3fa0-43b7-a845-2c6b086dd5b6.png">
