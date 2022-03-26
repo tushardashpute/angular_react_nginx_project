@@ -8,6 +8,7 @@ angular_react_nginx_project
         
 
 **1.  Install Nginx on Ubuntu instance:**
+
            # apt-get update   
            # sudo apt-get install -y nginx 
 
